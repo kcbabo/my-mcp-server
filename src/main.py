@@ -95,8 +95,7 @@ def main() -> None:
                    port=args.port,
                    stateless_http=args.stateless_http)
 
-    except KeyboardInterrupt:
-        #print("\nShutting down server...")
+    
     except Exception as e:
         #print(f"Server error: {e}", file=sys.stderr)
         sys.exit(1)
