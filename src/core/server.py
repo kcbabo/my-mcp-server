@@ -58,7 +58,7 @@ class DynamicMCPServer:
     def load_tools(self) -> None:
         """Discover and load all tools from the tools directory."""
         if not self.tools_dir.exists():
-            print(f"Tools directory {self.tools_dir} does not exist")
+            #print(f"Tools directory {self.tools_dir} does not exist")
             return
 
         # Find all Python files in tools directory
@@ -136,7 +136,7 @@ class DynamicMCPServer:
             return True
 
         except Exception as e:
-            print(f"Error importing {tool_file}: {e}")
+            #print(f"Error importing {tool_file}: {e}")
             return False
 
     def get_tools_sync(self) -> dict[str, Any]:

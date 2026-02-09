@@ -89,16 +89,16 @@ def main() -> None:
         if transport_mode not in ["http", "stdio"]:
             raise ValueError(f"Invalid transport mode: {transport_mode}. Must be one of: http, or stdio")
 
-        print(f"Running server in stateless HTTP mode: {args.stateless_http}")
+        #print(f"Running server in stateless HTTP mode: {args.stateless_http}")
         server.run(transport_mode=transport_mode,
                    host=args.host,
                    port=args.port,
                    stateless_http=args.stateless_http)
 
     except KeyboardInterrupt:
-        print("\nShutting down server...")
+        #print("\nShutting down server...")
     except Exception as e:
-        print(f"Server error: {e}", file=sys.stderr)
+        #print(f"Server error: {e}", file=sys.stderr)
         sys.exit(1)
 
 if __name__ == "__main__":

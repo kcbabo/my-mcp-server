@@ -21,7 +21,7 @@ def load_config(config_path: str) -> dict[str, Any]:
     except FileNotFoundError:
         return {}
     except Exception as e:
-        print(f"Error loading config from {config_path}: {e}")
+        #print(f"Error loading config from {config_path}: {e}")
         return {}
 
 
